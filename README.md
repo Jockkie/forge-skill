@@ -53,20 +53,95 @@ SKILL.md
 
 ### De 12 disciplines — uitgelegd
 
-| # | Discipline | Trigger | Actie | Evidence | Anti-pattern | Wanneer te gebruiken |
-|---|-----------|---------|-------|----------|--------------|---------------------|
-| 1 | **Knowledge ingestion** | Start van elke cyclus | Lees tot saturatie | Min. 3 bronnen met URL + titel + passage | Confirmation bias | Bij elk nieuw onderzoek of essaaistijl |
-| 2 | **Pattern compression** | Na ingestion | Comprimeer tot één zin | Pattern-sentence is gemarkeerd | Samenvatting i.p.v. patroon | Als je feiten moet omzetten in bruikbare structuur |
-| 3 | **Multi-perspective hold** | Vóór keuze met 2+ opties | Houd 3+ perspectieven | Gelabeld + verschillen geëxpliciteerd | Drie variaties van zelfde thema | Bij strategische keuzes voor merk/content |
-| 4 | **Melkor-test** | Na synthese | Val je synthese aan | Testresultaat gedocumenteerd | Overslaan omdat het "goed voelt" | Voordat je een claim publiceert of een pitch lanceert |
-| 5 | **Choice under uncertainty** | Na testen | Kies de beste optie | Keuze + reden + verworpen opties | Confusie met voorkeur | Bij AIPION klantkeuzes of content-strategie |
-| 6 | **Time horizon** | Keuze met lange termijn | Drie-tijdspanne check | Verleden/heden/toekomst gedocumenteerd | Geschiedenis negeren | Bij merkpositionering of platform-keuze |
-| 7 | **Source-of-truth ladder** | Bij elke claim | Wegen op gezag + recentheid | Bronnen gerankt | Tier-A check zonder gezag | Bij Tier-A verificatie van feiten |
-| 8 | **Failure mode catalog** | Einde cyclus of subagent-fout | Documenteer foutpatroon | Entry met datum, discipline, fout, correctie | Niet raadplegen | Elke keer dat een subagent faalt of een essay wordt gecorrigeerd |
-| 9 | **Counterfactual rehearsal** | Na elke keuze | Overweeg alternatief | Counterfactual gedocumenteerd | Als spijt gebruiken | Bij grote beslissingen (platform, merk, strategie) |
-| 10 | **Personalization layer** | Vóór output | Check user-pattern-cache | Output gemarkeerd | Technisch correct maar niet passend | Altijd — bij elke output naar Jock |
-| 11 | **Transparency layer** | Einde cyclus | Toon reasoning path | Drie-check-resultaat | Alleen antwoord tonen | Bij elke complexe vraag |
-| 12 | **Accountability layer** | Bij elke claim | Toon bron + reasoning | Claim + bron + confidence | Claims zonder bron | Bij feitelijke claims in essays of pitches |
+Elke discipline heeft vier dimensies:
+- **Trigger** — wanneer pas je dit toe?
+- **Actie** — wat doe je concreet?
+- **Evidence** — hoe toon je dat je het gedaan hebt?
+- **Anti-pattern** — waar let je op?
+
+#### 1. Knowledge ingestion
+- **Trigger:** Start van elke cyclus of nieuw onderwerp
+- **Actie:** Lees alle beschikbare bronnen. Stop wanneer de marginale bron niets nieuws toevoegt.
+- **Evidence:** Minimaal 3 bronnen gedocumenteerd met URL + titel + relevante passage.
+- **Anti-pattern:** Bronnen die alleen de al bestaande synthese bevestigen (confirmation bias).
+- **Wanneer:** Bij elk nieuw onderzoek, literatuurscan, of trend-analyse.
+
+#### 2. Pattern compression
+- **Trigger:** Na ingestion, vóórdat je syntheseert.
+- **Actie:** Comprimeer tot één zin die waar blijft als je elk detail wegneemt. Als je dat niet kunt, is de compressie onvolledig.
+- **Evidence:** De pattern-sentence is expliciet gemarkeerd in de output.
+- **Anti-pattern:** Een samenvatting die noemt in plaats van een patroon dat houdt.
+- **Wanneer:** Als je feiten moet omzetten in bruikbare structuur.
+
+#### 3. Multi-perspective hold
+- **Trigger:** Vóór elke keuze met 2+ opties.
+- **Actie:** Houd minimaal 3 perspectieven tegelijk. Ze moeten fundamenteel verschillend zijn, niet variaties op hetzelfde thema.
+- **Evidence:** De drie perspectieven zijn gelabeld en de verschillen zijn geëxpliciteerd.
+- **Anti-pattern:** Drie variaties van dezelfde-view en doen alsof het perspectieven zijn.
+- **Wanneer:** Bij strategische keuzes waar meerdere opties legitiem zijn.
+
+#### 4. Adversarial self-check (Melkor-test)
+- **Trigger:** Na synthese, vóór keuze.
+- **Actie:** Stel je voor dat de persoon die het meest wil dat het fout is, de synthese leest. Wat zeggen ze? Als ze het niet kunnen breken, is het echt. Als ze het kunnen, verfijn het.
+- **Evidence:** Het Melkor-test resultaat is gedocumenteerd (broken / not broken + reden).
+- **Anti-pattern:** De test overslaan omdat de synthese "goed voelt". Een goed voelende synthese die niet de Melkor-test doorstaat, is broos.
+- **Wanneer:** Voordat je een claim publiceert of een belangrijke beslissing neemt.
+
+#### 5. Choice under uncertainty
+- **Trigger:** Na ingestion, compressie, perspectieven, en Melkor-test.
+- **Actie:** Kies niet de meerderheid, niet de eerste optie, niet de meest populaire. Kies de optie die past bij het moment. Documenteer waarom.
+- **Evidence:** De gekozen optie + reden + verworpen opties + waarom verworpen.
+- **Anti-pattern:** Confusie van keuze met voorkeur. De keuze moet het moment passen, niet de maker's voorkeur.
+- **Wanneer:** Bij beslissingen waar meerdere valide opties bestaan.
+
+#### 6. Time horizon
+- **Trigger:** Bij keuzes die meer dan een week effect hebben.
+- **Actie:** Lees het werk in tijd. Wat is eerder geprobeerd? Hoe ziet dit over zes maanden eruit? Wat zijn de kosten van vertraging?
+- **Evidence:** Drie-tijdspanne check (verleden, heden, toekomst) is gedocumenteerd.
+- **Anti-pattern:** Historie negeren. Patronen herhalen; fouten echoën.
+- **Wanneer:** Bij merkpositionering, platform-keuze, of andere lange-termijn beslissingen.
+
+#### 7. Source-of-truth ladder
+- **Trigger:** Bij elke claim die je als basis gebruikt.
+- **Actie:** Wegen hiërarchisch. Niet "is dit Tier A?" maar "is dit de meest gezaghebbende Tier A bron voor deze specifieke claim?". Een primaire bron wint van een afgeleide. Een recente gezaghebbende bron wint van een oudere minder-gezaghebbende.
+- **Evidence:** Bronnen gerankt op gezag + recentheid + relevantie voor de claim.
+- **Anti-pattern:** Tier-A check zonder gezaghebbendheid voor de specifieke claim.
+- **Wanneer:** Bij feitsverificatie of het opbouwen van een beargumenteerde positie.
+
+#### 8. Failure mode catalog
+- **Trigger:** Aan het einde van elke cyclus, of wanneer een subagent faalt.
+- **Actie:** Als een Forge-cyclus een antwoord oplevert dat later als fout blijkt, gaat het foutpatroon naar de catalog. Koppel de fout aan de discipline die faalde. Vóór de volgende Forge-cyclus op vergelijkbaar werk, raadpleeg de catalog.
+- **Evidence:** Nieuwe entries in `~/.hermes/forge/failure-catalog.md` met: datum, discipline, foutomschrijving, correctie.
+- **Anti-pattern:** De catalog niet raadplegen. Elke cyclus begint met "wat ging de vorige keer fout?" — anders herhaal je fouten.
+- **Wanneer:** Elke keer dat een subagent faalt of wanneer je feedback krijgt over een fout.
+
+#### 9. Counterfactual rehearsal
+- **Trigger:** Na elke keuze.
+- **Actie:** Overweeg kort het alternatief. "Wat zou er zijn gebeurd als ik anders gekozen had?" Dit is geen spijt — het is een check. Als het alternatief beter was, moet de volgende beslissing daarvan leren.
+- **Evidence:** De counterfactual is gedocumenteerd (optie + verwachte uitkomst + leerpunt).
+- **Anti-pattern:** De counterfactual als spijt framework gebruiken in plaats van leermechanisme.
+- **Wanneer:** Bij grote beslissingen om te leren van het pad niet gekozen.
+
+#### 10. Personalization layer
+- **Trigger:** Vóór elke output die naar de gebruiker gaat.
+- **Actie:** Check de user-pattern-cache. Wat waarderen ze? Wat vermijden? Wat moeten ze horen? De skill stelt voor; de maker kiest.
+- **Evidence:** Output is gemarkeerd als "checked against user-pattern-cache" met relevante aanpassingen.
+- **Anti-pattern:** Een technisch correcte synthese die niet past bij de gebruiker is een mislukte synthese.
+- **Wanneer:** Altijd — bij elke output naar de gebruiker.
+
+#### 11. Transparency layer
+- **Trigger:** Aan het einde van elke cyclus.
+- **Actie:** Toon de gebruiker welke keuzes gemaakt zijn en waarom. Niet alleen het antwoord, maar de reasoning path. Drie checks per cyclus, minimaal: als voice-detector, als fact-checker, als essayist. Als de drie checks het oneens zijn, is de synthese niet klaar.
+- **Evidence:** Reasoning path is gedocumenteerd met: keuzes + redenen + verworpen opties + drie-check-resultaat.
+- **Anti-pattern:** Alleen het antwoord tonen zonder reasoning path.
+- **Wanneer:** Bij elke complexe vraag.
+
+#### 12. Accountability layer
+- **Trigger:** Bij elke output met een claim of aanbeveling.
+- **Actie:** De skill is verantwoordelijk voor eigen voorspellingen. "Ik had deze kennis, koos deze optie, hier is de bron, hier is het bewijs." Niet omdat de skill altijd morele agency heeft, maar omdat het zijn reasoning kan tonen. Dat maakt het betrouwbaar als instrument.
+- **Evidence:** Elke claim heeft een bijbehorende bron + reasoning + confidence-indicator.
+- **Anti-pattern:** Claims zonder bron of reasoning.
+- **Wanneer:** Bij feitelijke claims in essays, pitches, of adviezen.
 
 ### Best use cases per discipline
 
@@ -74,14 +149,14 @@ SKILL.md
 |-----------|---------------|-----------|
 | **Knowledge ingestion** | Essay-research, literatuurscan, trend-analyse | "Onderzoek de EU AI Act implementatie" — lees alle bronnen vóór je syntheseert |
 | **Pattern compression** | Veel feiten → bruikbare structuur | "Ik heb 20 papers geleven over AI-geletterdheid. Wat is het patroon?" |
-| **Multi-perspective hold** | Keuze tussen concurrerende strategieën | "Moet ik YouTube of TikTok prioriteren voor Atmasvara?" |
+| **Multi-perspective hold** | Keuze tussen concurrerende strategieën | "Moet ik YouTube of TikTok prioriteren voor mijn merk?" |
 | **Melkor-test** | Voordat je een claim publiceert | "Is mijn stelling over AI-agents houdbaar tegen kritiek?" |
-| **Choice under uncertainty** | Merk- of content-strategie | "Kies tussen 3 positioneringsopties voor AIPION" |
+| **Choice under uncertainty** | Merk- of content-strategie | "Kies tussen 3 positioneringsopties voor mijn bedrijf" |
 | **Time horizon** | Lange termijn beslissingen | "Wat is het effect van deze merkkeuze over 6 maanden?" |
 | **Source-of-truth ladder** | Tier-A verificatie | "Is deze claim over AI-modellen onderbouwd met primaire bronnen?" |
 | **Failure catalog** | Subagent coördinatie | "Subagent A faalde vorige keer op pattern-compression. Check catalog." |
 | **Counterfactual rehearsal** | Post-decision learning | "Wat als ik LinkedIn had gekozen in plaats van X?" |
-| **Personalization layer** | Elke output naar Jock | "Matcht deze synthese met Jocks schrijfstijl en waarden?" |
+| **Personalization layer** | Elke output naar de gebruiker | "Matcht deze synthese met de schrijfstijl en waarden van mijn gebruiker?" |
 | **Transparency layer** | Complexe vragen | "Toon waarom ik deze keuze maakte, niet alleen de keuze" |
 | **Accountability layer** | Feitelijke claims | "Elke claim in deze pitch heeft een bron en confidence-niveau" |
 
@@ -127,14 +202,14 @@ SKILL.md
 | `jockkie-onderzoeksmethode` | Forge discipline 1-7 raakt aan research-methodologie | Bij elke onderzoekstaak |
 | `jockkie-research-essay` | Forge levert het pattern-onderzoek, research-essay schrijft het | Bij elke research-essay |
 | `jockkie-storytelling-framework` | Forge levert de structurele keuze, storytelling de executie | Bij pitch decks of merkverhalen |
-| `jockkie-mandaat-adoptie` | Forge helpt bij keuzes wanneer Jock vaag is | Als Jock "doe maar" zegt |
+| `jockkie-mandaat-adoptie` | Forge helpt bij keuzes wanneer de gebruiker vaag is | Als de gebruiker "doe maar" zegt |
 
 ### Test-scenario
 
 Wanneer je Forge wilt testen, begin met een taak die 2+ oplossingen heeft. Bijvoorbeeld:
 
 - "Kies tussen A en B" (triviaal, geen Forge nodig)
-- "Ik hebben 3 manieren gevonden om X te doen. Kies de beste" (Forge-cyclus: ingest → compress → perspectieven → Melkor-test → kies → show)
+- "Ik heb 3 manieren gevonden om X te doen. Kies de beste" (Forge-cyclus: ingest → compress → perspectieven → Melkor-test → kies → show)
 
 De eerste keer dat je Forge integreert met een nieuwe gebruiker, lees SOUL.md en bouw een user-pattern-cache.
 
