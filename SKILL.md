@@ -3,7 +3,7 @@ name: "Forge"
 description: "Decision-preparation discipline for non-trivial work: ingest sources to saturation, compress to a pattern rather than a summary, hold three genuinely different perspectives, attack the synthesis before shipping it, then choose and show the reasoning path. Use when two or more options compete, when facts must become structure, when a claim needs testing before commitment, when the cost of being wrong exceeds the cost of time, or when coordinating subagents. Do not use for trivial lookups, single-source facts, mechanical tasks with no decision point, or work where speed matters more than depth. Forge prepares the choice; the maker makes it."
 ---
 
-# Forge
+# Forge v1.0
 
 Forge is a learning stage that runs before a non-trivial action. It does not decide. It ingests, compresses, tests, and hands a prepared choice to the maker.
 
@@ -105,8 +105,76 @@ When one of these is detected, stop and revise rather than continuing.
 
 Load only when needed. `references/disciplines.md` for the full trigger, action, evidence, and anti-pattern per discipline. `references/multi-agent.md` for the perspective pool, rotation rule, and subagent protocol. `references/state.md` for file formats and the coordination protocol with verification-style skills.
 
+## 8. Use cases per discipline
+
+| Discipline | Best use case | Example |
+|---|---|---|
+| **Ingest** | Research, literature scan, trend analysis | "Analyze the EU AI Act implementation" — read all sources before synthesizing |
+| **Compress** | Many facts → usable structure | "I've read 20 papers on AI literacy. What is the pattern?" |
+| **Perspectives** | Choice between competing strategies | "Should I prioritize YouTube or TikTok for my brand?" |
+| **Melkor test** | Before publishing a claim | "Is my statement about AI agents robust against criticism?" |
+| **Choose** | Brand or content strategy | "Choose between 3 positioning options for my company" |
+| **Time horizon** | Long-term decisions | "What is the effect of this brand choice in 6 months?" |
+| **Source ladder** | Tier-A verification | "Is this claim about AI models supported by primary sources?" |
+| **Failure catalog** | Subagent coordination | "Subagent A failed on pattern-compression last time. Check catalog." |
+| **Counterfactual** | Post-decision learning | "What if I had chosen LinkedIn instead of X?" |
+| **Fit** | Every output to the user | "Does this synthesis match the user's writing style and values?" |
+| **Reasoning path** | Complex questions | "Show why I made this choice, not just the choice" |
+| **Accountability** | Factual claims | "Every claim in this pitch has a source and confidence level" |
+
+## 9. Coordination with other skills
+
+Forge prepares choices. Other skills execute them.
+
+| Skill type | Coordination |
+|---|---|
+| **Verification skills** (Fablize, etc.) | Forge runs when the question is *what should be done*. The harness runs when the question is *did this actually work*. Harness failures become Forge catalog entries. |
+| **Domain skills** (writing, design, research) | Forge produces the pattern and the choice. Domain skills produce the artefact. Forge does not write the essay; it decides what the essay is about. |
+| **Multi-agent** | Subagents hold perspectives; they do not choose. The parent synthesizes. Every subagent must receive the pattern sentence, pattern cache slice, catalog entries, and assigned perspective. |
+
+## 10. Quick-reference
+
+```
+FORGE CYCLE — QUICK REFERENCE
+┌──────────────────────────────────────────────────────────────┐
+│ 1. INGEST      Read to saturation                          │
+│ 2. COMPRESS    Pattern in one sentence                     │
+│ 3. PERSPECTIVE At least 3, fundamentally different         │
+│ 4. MELKOR      Attack your own synthesis                   │
+│ 5. CHOOSE      Option that fits, not popular               │
+│ 6. TIME        Past, present, future                       │
+│ 7. SOURCES     Primary > secondary > tertiary              │
+│ 8. CATALOG     Check previous failures                     │
+│ 9. COUNTERFACT What if I chose differently?                │
+│ 10. FIT        Check user-pattern-cache                    │
+│ 11. TRANSPARENT Show reasoning path                        │
+│ 12. ACCOUNTABLE "I chose, here is evidence"                │
+└──────────────────────────────────────────────────────────────┘
+```
+
+## 11. Cycle state
+
+Each Forge cycle has a **cycle state** that is saved for subsequent sessions:
+
+```
+$FORGE_HOME/cycle-log.md
+```
+
+Contains:
+- Date + time of cycle
+- Depth (light / full)
+- Perspectives used (three roles)
+- Catalog read / written
+- Subject (one line)
+
+**Score (1-10):**
+- 1-3: Superficial, disciplines not truly applied
+- 4-6: Most disciplines applied, superficial verification
+- 7-8: All disciplines applied, hard verification, Melkor test passed
+- 9-10: Multi-agent, perspective rotation, new patterns in failure catalog
+
+No self-assigned quality score. A self-assigned score is written by the same process that would have skipped the discipline, so it carries no information. If a score is wanted, the user assigns it.
+
 ## Origin
 
 Named after Aulë's Forge in Tolkien's legendarium. Mairon, the most able of Aulë's Maiar, learned everything there before he chose, and chose badly. That is the point: the forge grants capability, not direction. Forge prepares. The maker chooses.
-
-MIT — Jock Oosterveer (concept), Hermes Agent (compilation).
