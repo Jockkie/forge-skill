@@ -23,13 +23,16 @@ Optionally set `FORGE_HOME` to control where state is written. Without it, Forge
 ```
 forge/
 ├── SKILL.md                    # always loaded when triggered
-└── references/
-    ├── disciplines.md          # full spec per discipline
-    ├── multi-agent.md          # perspective pool, rotation, subagents
-    └── state.md                # file formats, coordination
+├── references/
+│   ├── disciplines.md          # full spec per discipline
+│   ├── multi-agent.md          # perspective pool, rotation, subagents
+│   ├── state.md                # file formats, coordination
+│   └── language-policy-integration.md   # taalregeling + integratieregels
+└── templates/
+    └── cycle-state-template.md # start voor elke nieuwe Forge cycle
 ```
 
-`SKILL.md` carries the trigger conditions, the capability probe, the cycle, and the interruptors. Everything else is read only when needed, so installing Forge costs little context until it actually runs.
+`SKILL.md` carries the trigger conditions, the capability probe, the cycle, the interruptors, and the quick-reference card. Everything else is read only when needed, so installing Forge costs little context until it actually runs.
 
 ## Portability
 
@@ -45,12 +48,26 @@ Use the depth gate. Most of the cost is writing evidence, not thinking. Reversib
 
 Do not copy this as a procedure. The properties are the standard and the order is the discipline: learn first, compress to a pattern, hold perspectives, attack yourself, choose, show your work.
 
+## Integration
+
+Forge prepares choices. Other skills execute them. The following skills are part of the canonical Forge pipeline:
+
+| Skill | Role in pipeline |
+|-------|-----------------|
+| `using-superpowers` | Discovery: load relevant skills before responding |
+| `jockkie-research-routes` | Research: web search, URL extraction, source ladder |
+| `humanizer` | Rewrites Forge output to match user's tone of voice |
+| `tier-a-verification` | Validates every factual claim with primary sources |
+| `jockkie-onderzoeksmethode` | Research methodology and source evaluation |
+| `jockkie-essayist-stijl-v3` | Essay formatting and structure |
+| `gated-platform-research` | Gated content access (LinkedIn, Reddit, etc.) |
+
+**Language policy:** Forge respects the user's active language for internal reasoning. External sources remain in their original language, but all internal summaries, commit messages, and user-facing output follow the user's preference. See `references/language-policy-integration.md`.
+
+**Multi-agent coordination:** When subagents are spawned, each receives (a) the pattern sentence, (b) the user-pattern cache slice, (c) relevant failure catalog entries, (d) the assigned perspective role, and (e) the language policy. See `references/multi-agent.md`.
+
 ## Origin
 
 Named after Aulë's Forge in Tolkien's legendarium. Mairon, the ablest of Aulë's Maiar, learned everything there before he chose, and chose badly. That is the point rather than an awkward detail: the forge grants capability, not direction.
 
 The forge is not the work. The work is what the maker makes with what the forge produced.
-
-## Licence
-
-MIT. Jock Oosterveer (concept), Hermes Agent (compilation).
