@@ -1,5 +1,5 @@
 ---
-name: "Forge"
+name: forge
 description: "Decision-preparation discipline for non-trivial work: ingest sources to saturation, compress to a pattern rather than a summary, hold three genuinely different perspectives, attack the synthesis before shipping it, then choose and show the reasoning path. Use when two or more options compete, when facts must become structure, when a claim needs testing before commitment, when the cost of being wrong exceeds the cost of time, or when coordinating subagents. Do not use for trivial lookups, single-source facts, mechanical tasks with no decision point, or work where speed matters more than depth. Forge prepares the choice; the maker makes it."
 ---
 
