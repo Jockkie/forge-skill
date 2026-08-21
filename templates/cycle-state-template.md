@@ -1,58 +1,64 @@
-# Forge Cycle State Template
+# Cycle state templates
 
-Copy this file to `$FORGE_HOME/cycle-log.md` and append a new entry for each cycle.
+Starting points for the three files under `FORGE_HOME`. Copy the blocks you need. If the runtime cannot write persistently, hold these in session and hand them to the user as text before the session ends.
 
-```
-## Cycle <timestamp>
+## cycle-log.md
 
-- **Date:** YYYY-MM-DD HH:MM (local)
-- **Agent:** <agent name / session id>
-- **Depth:** light | full
-- **Subject:** <one-line description of what was decided>
-- **Perspective pool:** <roles used, e.g. "Skeptic, Optimist, Historicus">
-- **Pattern sentence:** <the single-sentence pattern the synthesis compressed to>
-- **Melkor result:** <what the attack revealed / "passed">
-- **Choice:** <what was chosen>
-- **Rejected options:** <1-3 lines on what was not chosen>
-- **Sources consulted:** <short list with confidence levels>
-- **Catalog read:** <yes/no; entries consulted>
-- **Catalog written:** <new entry added, if any>
-- **Score (1-10):** <only if externally assigned>
-```
-
-## File formats
-
-### user-pattern-cache.md
+One line per cycle. Its purpose is to make the perspective rotation rule and the catalog check verifiable after the fact, which a self-assessed quality score cannot do.
 
 ```
-# User Pattern Cache
+# Forge cycle log
+
+YYYY-MM-DD | <agent-id> | light|full | perspectives: <three roles> | catalog: read|none | <one-line subject>
+```
+
+For Full-depth cycles that warrant a record, expand to a block:
+
+```
+## YYYY-MM-DD HH:MM | <agent-id> | full
+Subject: <what was being decided>
+Perspectives: <the three roles used>
+Pattern: <the single sentence the synthesis compressed to>
+Melkor: <what the attack revealed, or "held">
+Choice: <what was chosen>
+Rejected: <what was not chosen, and why>
+Sources: <short list, with confidence per source>
+Catalog: read <entries> | written <entry>
+```
+
+## user-pattern-cache.md
+
+```
+# User pattern cache
+Built: YYYY-MM-DD | Source: <file> | Rebuild after: YYYY-MM-DD
 
 ## Values
-<comma-separated list of core values>
+What they optimise for, in their words where possible.
 
-## Writing style
-<sentence length, formality level, preferred vocabulary>
+## Style
+Register, format preferences, length, hard formatting rules.
 
 ## Anti-patterns
-<things the user explicitly rejects or dislikes>
+What they do not want to hear or receive. Explicit prohibitions go here.
 
-## Domain knowledge
-<areas of expertise, recent interests>
+## Expertise
+Domains where they know more than the agent, and where explanation is condescension.
 
-## Language preference
-<prefered language for internal reasoning and user-facing output>
+## Language
+Language for internal reasoning and user-facing output.
 ```
 
-### failure-catalog.md
+## failure-catalog.md
+
+Append-only. Newest at the bottom. Never rewrite or reorder existing entries; that is what makes the file safe for several agents to share.
 
 ```
-# Failure Catalog (append-only)
+# Failure catalog (append-only)
 
-## <timestamp> — <subject line>
-
-**What failed:** <description>
-**Root cause:** <analysis>
-**Fix:** <corrective action>
-**Prevention:** <how to avoid re-occurrence>
-**Skill(s) involved:** <list of skills>
+## YYYY-MM-DD | <agent-id> | <domain-tag>
+Discipline: <which of the twelve let it through>
+Failure: <what went wrong, one or two sentences>
+Correction: <what should happen instead next time>
 ```
+
+Write an entry when a cycle has been shown to be wrong, not when it merely feels imperfect. A catalog full of near-misses is a catalog nobody reads, and the read is the half that compounds.
