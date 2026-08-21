@@ -50,21 +50,37 @@ Do not copy this as a procedure. The properties are the standard and the order i
 
 ## Integration
 
-Forge prepares choices. Other skills execute them. The following skills are part of the canonical Forge pipeline:
+Forge prepares choices. It does not execute them, and it does not ship
+with the skills that do. What it defines is the set of roles a
+surrounding toolchain can fill.
 
-| Skill | Role in pipeline |
-|-------|-----------------|
-| `using-superpowers` | Discovery: load relevant skills before responding |
-| `jockkie-research-routes` | Research: web search, URL extraction, source ladder |
-| `humanizer` | Rewrites Forge output to match user's tone of voice |
-| `tier-a-verification` | Validates every factual claim with primary sources |
-| `jockkie-onderzoeksmethode` | Research methodology and source evaluation |
-| `jockkie-essayist-stijl-v3` | Essay formatting and structure |
-| `gated-platform-research` | Gated content access (LinkedIn, Reddit, etc.) |
+| Role | What it does in the pipeline | Required |
+|---|---|---|
+| Discovery | Surfaces relevant skills before Forge responds | No |
+| Research | Web search, source retrieval, URL extraction | No, but the source ladder is weak without it |
+| Verification | Validates load-bearing claims against primary sources | Recommended |
+| Voice | Rewrites output to match the user's register | No |
+| Format | Applies a house structure to the finished artefact | No |
+| Gated access | Reaches sources behind login walls | No |
 
-**Language policy:** Forge respects the user's active language for internal reasoning. External sources remain in their original language, but all internal summaries, commit messages, and user-facing output follow the user's preference. See `references/language-policy-integration.md`.
+If a role is unfilled, Forge runs without it and says so once, in the
+same degraded-mode line as the capability probe. Nothing here is a hard
+dependency.
 
-**Multi-agent coordination:** When subagents are spawned, each receives (a) the pattern sentence, (b) the user-pattern cache slice, (c) relevant failure catalog entries, (d) the assigned perspective role, and (e) the language policy. See `references/multi-agent.md`.
+To wire your own skills to these roles, create `FORGE-LOCAL.md` beside
+`SKILL.md` with one line per role. Forge reads it if present and ignores
+its absence. Keep it out of version control if the mapping is personal.
+
+**Language policy.** Internal reasoning, summaries, and user-facing
+output follow the user's active language. Sources stay in their original
+language and are not translated during ingestion, because translation
+before compression loses the pattern. Where the runtime exposes no
+language preference, follow the language of the request.
+
+**Multi-agent coordination.** Every spawned subagent receives the pattern
+sentence, the relevant slice of the user pattern cache, the relevant
+failure catalog entries, its assigned perspective role, and the active
+language. See `references/multi-agent.md`.
 
 ## Origin
 
