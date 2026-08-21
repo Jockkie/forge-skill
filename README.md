@@ -8,12 +8,19 @@ Most AI work fails because the model acts before it has learned. It produces a s
 
 ## Installation
 
-Forge is a plain Agent Skill: a `SKILL.md` with YAML frontmatter, plus reference files loaded on demand. Copy the whole directory into your runtime's skill location.
+Forge is a plain Agent Skill: a folder with a `SKILL.md` carrying `name` and `description` in YAML frontmatter, plus reference files loaded on demand. It uses no runtime-specific frontmatter fields, so it loads anywhere the format is supported.
 
-Claude Code, personal scope: `~/.claude/skills/forge/`
-Claude Code, project scope: `<project>/.claude/skills/forge/`
+Clone or copy the `forge/` directory into whichever directory your agent scans for skills. Keep the folder named `forge`, because the spec requires the folder name and the `name` field to match.
 
-For other runtimes, use whatever directory that runtime scans for skills; consult its documentation. The skill makes no assumptions about which one it is running in.
+| Runtime | Location |
+|---|---|
+| Claude Code | `~/.claude/skills/forge/` (personal) or `.claude/skills/forge/` (project) |
+| Grok Build | `~/.grok/skills/forge/` or `.grok/skills/forge/`; it also scans `.agents/skills/` and reads `.claude/` directly |
+| Codex CLI, Cursor, and others sharing the convention | `.agents/skills/forge/` |
+| GitHub Copilot | `.github/skills/forge/` |
+| Grok app | import the folder as a skill pack through the app's skills dialog |
+| A self-built or custom agent | whatever directory your loader scans, e.g. `~/<agent>/skills/forge/`; the folder must stay named `forge` |
+| A runtime with no skills mechanism | paste `SKILL.md` into the system prompt or context file, and hand over the reference files when the cycle calls for them |
 
 Optionally set `FORGE_HOME` to control where state is written. Without it, Forge falls back to `./.forge/`, then `~/.forge/`, then session-only memory.
 
@@ -33,7 +40,7 @@ forge/
     └── cycle-state-template.md    # starting point for the state files
 ```
 
-`SKILL.md` carries the trigger conditions, the capability probe, the cycle, and the interruptors. Everything else is read only when needed, so installing Forge costs little context until it actually runs.
+Forge follows the recommended layout from the specification, with reference material under `references/`. `SKILL.md` carries the trigger conditions, the capability probe, the cycle, and the interruptors. Everything else is read only when needed, so installing Forge costs little context until it actually runs.
 
 ## Portability
 
